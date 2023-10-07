@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    html {
+        scroll-behavior: smooth;
+        font-family: Poppins, sans-serif;
+    }
+    body {
+        background-color: body;
+        color: #757575;
+        font-size: 1rem;
+    }
+    button,
+    input,
+    textarea {
+        font-size: 1rem;
+    }
+    h1,
+    h2,
+    h3 {
+        color: #333333;
+        font-weight: 600;
+    }
+    ul {
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+    }
+    button {
+        cursor: pointer;
+        border: none;
+        outline: none;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    section {
+        padding: 6rem 0 2rem;
+    }
+}
+
+@layer components {
+    .section-c {
+        padding: 6rem 0 2rem;
+    }
+
+    .section--title {
+        font-size: 2.25rem;
+        color: #333333;
+    }
+
+    .section--subtitle {
+        display: block;
+        font-size: 0.875rem;
+        margin-bottom: 4rem;
+    }
+
+    .section--title,
+    .section--subtitle {
+        text-align: center;
+    }
+    .container-c {
+        max-width: 968px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .grid-c {
+        display: grid;
+        gap: 1.5rem;
+    }
+    .button-c {
+        display: inline-block;
+        background-color: #333333;
+        color: fff;
+        padding: 1.25rem 2rem;
+        border-radius: 1rem;
+        font-weight: 500;
+    }
+
+    .button-c:hover {
+        background-color: #000000;
+    }
+
+    .button--icon {
+        margin-left: 0.5rem;
+    }
+
+    .button--flex {
+        display: inline-flex;
+        align-items: center;
+    }
+}
