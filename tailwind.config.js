@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+// /** @type {import('tailwindcss').Config} */
 export default {
     darkMode: 'class',
     content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
@@ -6,18 +6,27 @@ export default {
         sm: '350px',
         md: '768px',
         lg: '992px',
-        //     xl: '1440px',
+        xl: '1170px',
+        // lg: { max: '992px' },
+
+        // md: { min: '576px', max: '768px' },
+
+        // sm: { max: '350px' },
     },
     theme: {
-        color: {
-            title: '#333333',
-            title_dark: '#000000',
-            text: '#757575',
-            body: '#fafafa',
-            container: '#fff',
+        colors: {
+            title: '#6D6F6E',
+            title_dark: '#38383F',
+            text: '#979696',
+            body: '#EAEAEA',
+            container: '#F6F6F6',
         },
         fontFamily: {
             Poppins: 'Poppins',
+        },
+        backgroundImage: {
+            profile: "url('/src/assets/Profile.jpg')",
+            about: "url('/src/assets/about.jpg')",
         },
         extend: {},
     },
