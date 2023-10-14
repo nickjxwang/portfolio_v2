@@ -1,39 +1,35 @@
 import { HiMenuAlt2 } from 'react-icons/hi'
 import Menu from '../components/Menu'
 import Social from '../components/Social'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useLayoutEffect } from 'react'
 
-const Header = ({ showMenu, setShowMenu }) => {
+const Header = ({ showMenu, setShowMenu, aboutP, projectsP, contactP }) => {
     const [isScrolled, setIsScrolled] = useState(false)
     const [activeNav, setActiveNav] = useState('#home')
-    // const [menuAbout, setMenuAbout] = useState(false)
-    // const [menuWork, setMenuWork] = useState(false)
-    // const [menuEmail, setMenuEmail] = useState(false)
 
-    // const handelMenuActive = () => {
-    //     if (activeNav === '#about' && isScrolled) {
-    //         setMenuAbout(true)
-    //     } else {
-    //         setMenuAbout(false)
-    //     }
-    //     if (activeNav === '#about' && isScrolled) {
-    //         setMenuWork(true)
-    //     }
-    //     if (activeNav === '#about' && isScrolled) {
-    //         setMenuEmail(true)
-    //     }
-    // }
+    useLayoutEffect(() => {
+        const windowHeight = window.innerHeight
 
-    // useEffect(() => {
-    //     handelMenuActive()
-    // }, [activeNav, isScrolled])
-
-    useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY >= 500) {
+            const scrollY = window.scrollY
+
+            if (scrollY >= windowHeight - 50) {
                 setIsScrolled(true)
             } else {
                 setIsScrolled(false)
+            }
+
+            if (scrollY < windowHeight - 80) {
+                setActiveNav('#home')
+            }
+            if (scrollY > windowHeight - 80) {
+                setActiveNav('#about')
+            }
+            if (scrollY > aboutP + windowHeight - 80) {
+                setActiveNav('#projects')
+            }
+            if (scrollY > projectsP + aboutP + windowHeight - 80) {
+                setActiveNav('#contact')
             }
         }
 
@@ -42,67 +38,90 @@ const Header = ({ showMenu, setShowMenu }) => {
         return () => {
             window.removeEventListener('scroll', handleScroll)
         }
-    }, [])
+    }, [aboutP, projectsP, contactP])
 
     return (
         <header
-            className={`w-full fixed top-0 left-0 z-50 ${
-                isScrolled ? 'bg-title_dark bg-opacity-30' : ''
+            className={`w-full fixed top-0 left-0 z-50 transition duration-300 ${
+                isScrolled ? 'bg-[#f0f0f0] bg-opacity-100 scroll-header' : ''
             }`}
             id='header'
         >
             <nav className='section-center w-xl h-[calc(3rem+1.5rem)] flex justify-between items-center gap-4'>
                 <a
                     href='#home'
-                    className={`relative text-container font-medium ${
+                    className={`relative text-container font-medium transition duration-300 ${
                         isScrolled ? 'text-title_dark' : ''
                     }`}
                     onClick={() => setActiveNav('#home')}
                 >
                     NICK
                     <span
-                        className={`absolute top-[9.5px] right-[14px] rounded-full bg-[#D6C7BC] w-[4.5px] h-[4.5px] ${
-                            isScrolled ? 'bg-title' : ''
+                        className={`absolute top-[9.5px] right-[14px] rounded-full transition duration-300 bg-[#D6C7BC] w-[4.5px] h-[4.5px] ${
+                            isScrolled ? 'bg-title_dark' : 'bg-container'
                         }`}
                     ></span>
                 </a>
                 <div className='hidden sm:flex'>
                     <ul className='grid-c flex gap-8'>
-                        <li>
+                        <li
+                            className={`pb-1 text-text font-medium transition duration-300 ${
+                                activeNav === '#about' && isScrolled
+                                    ? 'text-title_dark hover:text-title_dark active:text-title_dark'
+                                    : ''
+                            } ${
+                                activeNav === '#home' && !isScrolled
+                                    ? 'hover:text-container active:text-container'
+                                    : ''
+                            } ${isScrolled ? 'hover:text-title_dark' : ''}`}
+                        >
                             <a
                                 href='#about'
                                 onClick={() => setActiveNav('#about')}
-                                className={
-                                    activeNav === '#about'
-                                        ? 'nav-link nav-active'
-                                        : 'nav-link'
-                                }
                             >
                                 About
                             </a>
                         </li>
-                        <li>
+                        <li
+                            className={`pb-1 text-text font-medium transition duration-300 ${
+                                activeNav === '#projects' && isScrolled
+                                    ? 'text-title_dark hover:text-title_dark active:text-title_dark'
+                                    : ''
+                            } ${
+                                activeNav === '#home' && !isScrolled
+                                    ? 'hover:text-container active:text-container'
+                                    : ''
+                            } ${
+                                isScrolled
+                                    ? 'hover:text-title_dark active:text-title_dark'
+                                    : ''
+                            }`}
+                        >
                             <a
                                 href='#projects'
                                 onClick={() => setActiveNav('#projects')}
-                                className={
-                                    activeNav === '#projects'
-                                        ? 'nav-link nav-active'
-                                        : 'nav-link'
-                                }
                             >
                                 Projects
                             </a>
                         </li>
-                        <li>
+                        <li
+                            className={`pb-1 text-text font-medium transition duration-300 ${
+                                activeNav === '#contact' && isScrolled
+                                    ? 'text-title_dark hover:text-title_dark active:text-title_dark'
+                                    : ''
+                            } ${
+                                activeNav === '#home' && !isScrolled
+                                    ? 'hover:text-container active:text-container'
+                                    : ''
+                            } ${
+                                isScrolled
+                                    ? 'hover:text-title_dark active:text-title_dark'
+                                    : ''
+                            }`}
+                        >
                             <a
                                 href='#contact'
                                 onClick={() => setActiveNav('#contact')}
-                                className={
-                                    activeNav === '#contact'
-                                        ? 'nav-link nav-active'
-                                        : 'nav-link'
-                                }
                             >
                                 Contact
                             </a>
@@ -111,7 +130,7 @@ const Header = ({ showMenu, setShowMenu }) => {
                     <i className='uil uil-times hidden'></i>
                 </div>
                 <div
-                    className={`flex justify-center font-medium transition duration-300 ease-in-out cursor-pointer rounded-lg z-[999] sm:hidden ${
+                    className={`flex justify-center font-medium transition duration-300 ease-in-out cursor-pointer rounded-lg transition duration-300 z-[999] sm:hidden ${
                         showMenu ? 'text-title_dark' : 'text-title'
                     }  ml-6`}
                     onClick={() => setShowMenu(!showMenu)}
@@ -119,14 +138,14 @@ const Header = ({ showMenu, setShowMenu }) => {
                     <div
                         className={`bg-opacity-0 p-2 rounded-full text-container transition z-10 duration-300 ${
                             showMenu
-                                ? 'bg-opacity-10 drop-shadow-[0_-1px_2px_rgba(255,255,255,0.15)]'
+                                ? 'bg-opacity-10 bg-container drop-shadow-[0_-1px_2px_rgba(255,255,255,0)]'
                                 : ''
                         } ${isScrolled ? 'bg-text' : 'bg-body'}`}
                     >
                         <div className='bg-opacity-0 rounded-full'>
                             <HiMenuAlt2
                                 size={25}
-                                className={`text-container font-medium text-right ${
+                                className={`text-container font-medium transition duration-300 text-right ${
                                     isScrolled ? 'text-title_dark' : ''
                                 }`}
                             />
@@ -135,9 +154,6 @@ const Header = ({ showMenu, setShowMenu }) => {
                             showMenu={showMenu}
                             activeNav={activeNav}
                             setActiveNav={setActiveNav}
-                            // menuAbout={menuAbout}
-                            // menuWork={menuWork}
-                            // menuEmail={menuEmail}
                             isScrolled={isScrolled}
                         />
                     </div>

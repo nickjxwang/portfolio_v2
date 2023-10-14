@@ -28,7 +28,17 @@ export default {
             profile: "url('/src/assets/Profile.jpg')",
             about: "url('/src/assets/about.jpg')",
         },
-        extend: {},
+        extend: {
+            keyframes: {
+                move: {
+                    '0%, 100%': { transform: 'translateX(0)' },
+                    '50%': { transform: 'translateX(8px)' },
+                },
+            },
+            animation: {
+                move: 'move 1s ease-in-out infinite',
+            },
+        },
     },
     plugins: [],
 }
