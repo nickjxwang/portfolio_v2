@@ -1,55 +1,41 @@
-import { useEffect, useState } from 'react'
-import { Header, About, Home, Skills, Footer, Contact, Works } from './layout'
+import { useEffect, useRef, useState } from 'react'
+import { Link as ScrollLink, Element } from 'react-scroll'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import SingleProject from './components/singleProject'
+import ScrollToTop from './components/ScrollToTop'
+import Home from './layout/Home'
+import Footer from './layout/Footer'
 
 const App = () => {
     const [showMenu, setShowMenu] = useState(false)
-    const [aboutP, setAboutP] = useState(0)
-    const [projectsP, setProjectsP] = useState(0)
-    const [contactP, setContactP] = useState(0)
-
-    useEffect(() => {
-        const CalculateHeights = () => {
-            const aboutElement = document.getElementById('about')
-            const projectsElement = document.getElementById('projects')
-            const contactElement = document.getElementById('contact')
-
-            if (aboutElement) {
-                setAboutP(aboutElement.offsetHeight)
-            }
-            if (projectsElement) {
-                setProjectsP(projectsElement.offsetHeight)
-            }
-            if (contactElement) {
-                setContactP(contactElement.offsetHeight)
-            }
-        }
-
-        CalculateHeights()
-
-        window.addEventListener('scroll', CalculateHeights)
-
-        return () => {
-            window.removeEventListener('scroll', CalculateHeights)
-        }
-    }, [])
+    const [isScrolled, setIsScrolled] = useState(false)
+    const [activeNav, setActiveNav] = useState('#home')
 
     return (
-        <>
-            <Header
-                showMenu={showMenu}
-                setShowMenu={setShowMenu}
-                aboutP={aboutP}
-                projectsP={projectsP}
-                contactP={contactP}
-            />
+        <Router>
+            {/* <ScrollToTop /> */}
+
             <main onClick={() => setShowMenu(false)}>
-                <Home />
-                <About id='about ' />
-                <Works id='projects ' />
-                <Contact id='contact ' />
+                <Routes>
+                    <Route
+                        path='/'
+                        exact
+                        element={
+                            <Home
+                                showMenu={showMenu}
+                                setShowMenu={setShowMenu}
+                                setActiveNav={setActiveNav}
+                                activeNav={activeNav}
+                                isScrolled={isScrolled}
+                                setIsScrolled={setIsScrolled}
+                            />
+                        }
+                    />
+                    <Route path='/:category/:id' element={<SingleProject />} />
+                </Routes>
             </main>
             <Footer />
-        </>
+        </Router>
     )
 }
 export default App

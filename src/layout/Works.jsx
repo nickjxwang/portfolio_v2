@@ -27,7 +27,7 @@ const Works = () => {
 
     return (
         <section
-            className='w-full mx-auto px-6 relative h-full xl:px-20 lg:w-[85%] lg:px-0 sm:section'
+            className='w-full mx-auto px-6 relative h-full xl:px-20 lg:w-[85%] lg:px-0'
             id='projects'
         >
             <div className='flex flex-col'>
@@ -36,7 +36,7 @@ const Works = () => {
                         <h2 className='absolute -top-6 -left-8 -z-10 text-body text-[5rem] xl:-left-2 lg:text-[9rem] md:text-[8rem]'>
                             Projects
                         </h2>
-                        <div className='w-[95%] flex flex-col mt-[8rem] justify-center items-center mx-auto xl:mt-[4rem] xl:mb-0 xl:px-10 xl:w-full'>
+                        <div className='w-[95%] flex flex-col mt-[8rem] justify-center items-center mx-auto xl:mb-0 xl:px-10 xl:w-full'>
                             <ProjectNav
                                 active={active}
                                 handleClick={handleClick}

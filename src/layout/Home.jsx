@@ -1,19 +1,28 @@
-import Social from '../components/Social'
-import Data from '../components/Data'
-import AboutImg from '../assets/about.jpg'
+import { Hero, Header, Works, About, Contact } from '../layout'
 
-const Home = () => {
+const Home = ({
+    showMenu,
+    setShowMenu,
+    setActiveNav,
+    isScrolled,
+    setIsScrolled,
+    activeNav,
+}) => {
     return (
-        <section className='relative h-screen' id='home'>
-            <div className='w-full h-full relative bg-profile bg bg-no-repeat bg-[center_right_-4rem] bg-cover sm:bg-center'>
-                <div className='absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center bg-title_dark bg-opacity-30'>
-                    <div className=''>
-                        <Data />
-                    </div>
-                </div>
-            </div>
-        </section>
+        <>
+            <Header
+                showMenu={showMenu}
+                setShowMenu={setShowMenu}
+                setActiveNav={setActiveNav}
+                activeNav={activeNav}
+                isScrolled={isScrolled}
+                setIsScrolled={setIsScrolled}
+            />
+            <Hero />
+            <About />
+            <Works />
+            <Contact />
+        </>
     )
 }
-
 export default Home

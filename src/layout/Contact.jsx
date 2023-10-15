@@ -20,7 +20,7 @@ const Contact = () => {
 
     return (
         <section
-            className='w-full mx-auto px-6 relative h-full xl:w-3/4 xl:px-20 lg:w-[85%] lg:px-0 sm:section'
+            className='w-full mx-auto px-6 relative h-full xl:px-20 lg:w-[85%] lg:px-0'
             id='contact'
         >
             <div className='flex flex-col'>
@@ -30,7 +30,7 @@ const Contact = () => {
                             Contact
                         </h2>
 
-                        <div className='w-[95%] flex flex-col my-[8rem] justify-center items-center mx-auto xl:mt-[4.2rem] xl:mb-0 xl:px-10 xl:w-full'>
+                        <div className='w-[95%] flex flex-col my-[8rem] justify-center items-center mx-auto xl:px-10 xl:w-full'>
                             <form
                                 ref={form}
                                 onSubmit={sendEmail}

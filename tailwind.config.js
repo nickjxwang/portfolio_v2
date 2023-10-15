@@ -34,9 +34,18 @@ export default {
                     '0%, 100%': { transform: 'translateX(0)' },
                     '50%': { transform: 'translateX(8px)' },
                 },
+                expand: {
+                    '0%, 100%': {
+                        opacity: '1',
+                    },
+                    '50%': {
+                        opacity: '0',
+                    },
+                },
             },
             animation: {
                 move: 'move 1s ease-in-out infinite',
+                expand: 'expand 1.2s ease-out infinite',
             },
         },
     },

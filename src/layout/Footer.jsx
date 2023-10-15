@@ -7,7 +7,7 @@ const Footer = () => {
             <div className='container-c flex flex-col justify-center items-center py-6'>
                 {/* <h1 className='text-title text-3xl text-center mb-4'>Nick</h1> */}
 
-                <ul className='flex justify-center gap-6 mb-4'>
+                {/* <ul className='flex justify-center gap-6 mb-4'>
                     <li>
                         <a
                             href='#about'
@@ -24,9 +24,7 @@ const Footer = () => {
                             Projects
                         </a>
                     </li>
-                </ul>
-
-                <div className='w-full h-[1px] gradient-line rounded-lg mb-5'></div>
+                </ul> */}
 
                 <div className='flex justify-center gap-5'>
                     <a
@@ -40,6 +38,8 @@ const Footer = () => {
                         <RiGithubLine className='social-icon-footer rounded-full' />
                     </a>
                 </div>
+
+                <div className='w-full h-[1px] gradient-line rounded-lg mt-5'></div>
 
                 <span className='block mt-10 text-title text-center text-[.8rem]'>
                     &copy; {new Date().getFullYear()} NICK WANG

@@ -3,7 +3,7 @@ import AboutImg from '../assets/about.jpg'
 const About = () => {
     return (
         <section
-            className='w-full mx-auto px-6 relative h-full xl:w-3/4 lg:w-[85%] md:px-0 sm:section'
+            className='w-full mx-auto px-6 relative h-full xl:w-3/4 lg:w-[85%] md:px-0 sm:pt-20'
             id='about'
         >
             <div className='grid grid-rows-4 md:grid-cols-5 md:grid-rows-1'>

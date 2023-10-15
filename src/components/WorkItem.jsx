@@ -1,4 +1,5 @@
 import { BsArrowRightShort } from 'react-icons/bs'
+import { Link } from 'react-router-dom'
 
 const WorkItem = ({ item }) => {
     return (
@@ -14,10 +15,10 @@ const WorkItem = ({ item }) => {
                         {item.title}
                     </h3>
                 </div>
-                <div className='flex justify-between items-center'>
-                    <h3 className='text-text font-normal text-[8px]'>
-                        {/* {item.data} */}
-                    </h3>
+                <a
+                    href={`/${item.category}/${item.id}`}
+                    className='inline-flex justify-end items-center'
+                >
                     <div className='flex justify-center items-center gap-[2px] cursor-pointer border-[1px] py-[4px] px-2 group transition duration-300 hover:border-title_dark border-[#d7d7d7] md:px-3 md:py-1 lg:px-4 lg:py-[.4rem] xl:px-5 md:gap-1'>
                         <h3 className='text-text font-normal rounded-[2px] text-[8px] group-hover:text-title sm:text-xs xl:text-base'>
                             View
@@ -25,7 +26,7 @@ const WorkItem = ({ item }) => {
 
                         <BsArrowRightShort className='group-hover:animate-move text-xs font-light text-text group-hover:text-title sm:text-base' />
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     )
