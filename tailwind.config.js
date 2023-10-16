@@ -34,6 +34,10 @@ export default {
                     '0%, 100%': { transform: 'translateX(0)' },
                     '50%': { transform: 'translateX(8px)' },
                 },
+                moveLeft: {
+                    '0%, 100%': { transform: 'translateX(0)' },
+                    '50%': { transform: 'translateX(-8px)' },
+                },
                 expand: {
                     '0%, 100%': {
                         opacity: '1',
@@ -45,6 +49,7 @@ export default {
             },
             animation: {
                 move: 'move 1s ease-in-out infinite',
+                move_left: 'moveLeft 1.2s ease-in-out infinite',
                 expand: 'expand 1.2s ease-out infinite',
             },
         },

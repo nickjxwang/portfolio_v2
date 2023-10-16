@@ -1,4 +1,4 @@
-import { Hero, Header, Works, About, Contact } from '../layout'
+import { Hero, Header, Works, About, Contact, Footer } from '../layout'
 
 const Home = ({
     showMenu,
@@ -22,6 +22,7 @@ const Home = ({
             <About />
             <Works />
             <Contact />
+            <Footer />
         </>
     )
 }

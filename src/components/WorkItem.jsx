@@ -21,7 +21,7 @@ const WorkItem = ({ item }) => {
                 >
                     <div className='flex justify-center items-center gap-[2px] cursor-pointer border-[1px] py-[4px] px-2 group transition duration-300 hover:border-title_dark border-[#d7d7d7] md:px-3 md:py-1 lg:px-4 lg:py-[.4rem] xl:px-5 md:gap-1'>
                         <h3 className='text-text font-normal rounded-[2px] text-[8px] group-hover:text-title sm:text-xs xl:text-base'>
-                            View
+                            More
                         </h3>
 
                         <BsArrowRightShort className='group-hover:animate-move text-xs font-light text-text group-hover:text-title sm:text-base' />

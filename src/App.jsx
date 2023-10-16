@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import SingleProject from './components/singleProject'
 import ScrollToTop from './components/ScrollToTop'
 import Home from './layout/Home'
-import Footer from './layout/Footer'
 
 const App = () => {
     const [showMenu, setShowMenu] = useState(false)
@@ -31,10 +30,12 @@ const App = () => {
                             />
                         }
                     />
-                    <Route path='/:category/:id' element={<SingleProject />} />
+                    <Route
+                        path='/:category/:id'
+                        element={<SingleProject isScrolled={isScrolled} />}
+                    />
                 </Routes>
             </main>
-            <Footer />
         </Router>
     )
 }

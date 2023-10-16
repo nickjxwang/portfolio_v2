@@ -211,10 +211,10 @@
     }
 
     .social-icon {
-        @apply text-3xl bg-text bg-opacity-20 p-1 transition duration-300 text-container hover:text-title_dark hover:bg-container hover:opacity-50 lg:text-5xl;
+        @apply text-3xl bg-text bg-opacity-30 p-1 transition duration-300 text-body hover:text-title_dark hover:bg-body lg:text-5xl;
     }
 
     .social-icon-footer {
-        @apply text-3xl bg-body p-1 text-title_dark transition duration-300 hover:text-container hover:bg-title_dark;
+        @apply text-3xl bg-body p-1 text-title_dark transition duration-300 hover:text-body hover:bg-title_dark;
     }
 }

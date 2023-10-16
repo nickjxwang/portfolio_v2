@@ -1,73 +1,65 @@
-import { useNavigate, useParams, Link } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { projectsData } from '../context/projects_context'
-import { useEffect, useState } from 'react'
+import { BsArrowLeftShort } from 'react-icons/bs'
 import ScrollToTop from './ScrollToTop'
 import img from '../assets/Profile.webp'
+import SingleProjectHeader from './SingleProjectHeader'
+import Footer from '../layout/Footer'
+import SingleProjectVideo from './SingleProjectVideo'
 
 const SingleProject = () => {
-    const [isScrolledProject, setIsScrolledProject] = useState(false)
-
     const navigate = useNavigate()
     const { id } = useParams()
-    const product = projectsData.find(product => product.id === id)
-
+    const project = projectsData.find(product => product.id === id)
     const handleGoBack = () => {
         navigate(-1)
     }
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const windowHeight = window.innerHeight
-            const scrollY = window.scrollY
-
-            if (scrollY >= 50) {
-                setIsScrolledProject(true)
-            } else {
-                setIsScrolledProject(false)
-            }
-        }
-
-        window.addEventListener('scroll', handleScroll)
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll)
-        }
-    }, [])
-
     return (
-        <div className='h-screen bg-title_dark'>
-            <div
-                className={`w-full fixed top-0 left-0 z-50 ${
-                    isScrolledProject
-                        ? 'bg-[#000] bg-opacity-40 backdrop-blur-[2px] scroll-header'
-                        : ''
-                }`}
-            >
-                <nav className='section-center w-xl h-[calc(3rem+1.5rem)] flex justify-center items-center gap-4'>
-                    <Link
-                        to='/'
-                        className={`relative cursor-pointer text-container font-medium transition duration-300`}
-                    >
-                        NICK
-                        <span
-                            className={`absolute top-[9.5px] right-[14px] rounded-full transition duration-300 bg-[#D6C7BC] w-[4.5px] h-[4.5px]`}
-                        ></span>
-                    </Link>
-                </nav>
+        <div className='h-screen bg-[#f0f0f0]'>
+            <ScrollToTop />
+            <SingleProjectHeader />
+
+            <div className='w-full h-full relative bg-profile bg-center bg-no-repeat bg-cover'>
+                <div className='absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center bg-[#000] bg-opacity-40'></div>
             </div>
 
-            <button onClick={handleGoBack} className='text-container section'>
-                Back
-            </button>
-            {/* <div className='w-full h-full absolute bg-profile bg bg-no-repeat bg-[center_right_-4rem] bg-cover sm:bg-center'> */}
-            {/* <div className='section '>
-                <button onClick={handleGoBack} className='text-container'>
-                    Back
-                </button>
-                <h2 className='text-container'>{product.title}</h2>
-                <img src={img} alt='' className='w-1/2 bg-cover' />
-            </div> */}
-            {/* </div> */}
+            <div className='h-full absolute top-0 left-[10%] right-[10%] z-20'>
+                <div className='h-full flex flex-col items-start justify-between z-20'>
+                    <button
+                        onClick={handleGoBack}
+                        className='text-container pt-20 group flex items-center gap-1'
+                    >
+                        <BsArrowLeftShort className='text-xl group-hover:animate-move_left' />
+                        Back
+                    </button>
+                    <div className='w-[100%] h-full flex flex-col justify-end pb-52 gap-4'>
+                        <h2 className='text-container text-4xl md:text-5xl lg:text-6xl'>
+                            {project.title}
+                        </h2>
+                        <p className='text-container text-opacity-80 text-xs xl:w-[85%] lg:text-lg md:text-base'>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Optio fuga vero fugit explicabo similique
+                            repellat impedit mollitia ipsa! Quod quae ipsa
+                            numquam, aut pariatur qui quibusdam magnam omnis
+                            repudiandae ducimus.
+                        </p>
+                        <div className='w-full h-[1px] gradient-line rounded-lg mt-5'></div>
+                        <div className='flex  items-center gap-10 mt-4'>
+                            <div className='border border-body px-2 py-2 rounded-sm text-body text-xs transition duration-300 hover:text-title_dark hover:bg-body md:text-base md:px-3 md:py-3'>
+                                <a href='#'>View the project</a>
+                            </div>
+                            <div className='border border-body px-2 py-2 rounded-sm text-body text-xs transition duration-300 hover:text-title_dark hover:bg-body md:text-base md:px-3 md:py-3'>
+                                <a href='#'>View the code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <SingleProjectVideo project={project} />
+
+            <Footer />
         </div>
     )
 }
