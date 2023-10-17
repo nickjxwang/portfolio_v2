@@ -196,6 +196,13 @@
     .gradient-line {
         background: linear-gradient(to right, #a3a3a300, #c6c6c6, #a3a3a300);
     }
+
+    .swiper-pagination-bullet {
+        background-color: #38383f; /* 按钮的背景颜色 */
+        width: 10px; /* 按钮的宽度 */
+        height: 10px; /* 按钮的高度 */
+        margin: 5px; /* 按钮之间的间距 */
+    }
 }
 
 @layer utilities {

@@ -14,28 +14,28 @@ const App = () => {
         <Router>
             {/* <ScrollToTop /> */}
 
-            <main onClick={() => setShowMenu(false)}>
-                <Routes>
-                    <Route
-                        path='/'
-                        exact
-                        element={
-                            <Home
-                                showMenu={showMenu}
-                                setShowMenu={setShowMenu}
-                                setActiveNav={setActiveNav}
-                                activeNav={activeNav}
-                                isScrolled={isScrolled}
-                                setIsScrolled={setIsScrolled}
-                            />
-                        }
-                    />
-                    <Route
-                        path='/:category/:id'
-                        element={<SingleProject isScrolled={isScrolled} />}
-                    />
-                </Routes>
-            </main>
+            {/* <main onClick={() => setShowMenu(false)}> */}
+            <Routes>
+                <Route
+                    path='/'
+                    exact
+                    element={
+                        <Home
+                            showMenu={showMenu}
+                            setShowMenu={setShowMenu}
+                            setActiveNav={setActiveNav}
+                            activeNav={activeNav}
+                            isScrolled={isScrolled}
+                            setIsScrolled={setIsScrolled}
+                        />
+                    }
+                />
+                <Route
+                    path='/:category/:id'
+                    element={<SingleProject isScrolled={isScrolled} />}
+                />
+            </Routes>
+            {/* </main> */}
         </Router>
     )
 }

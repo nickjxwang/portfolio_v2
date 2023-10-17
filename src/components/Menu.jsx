@@ -3,7 +3,13 @@ import { Link as ScrollLink } from 'react-scroll'
 
 import { GoHome, GoGear } from 'react-icons/go'
 
-const Menu = ({ showMenu, activeNav, setActiveNav, isScrolled }) => {
+const Menu = ({
+    showMenu,
+    activeNav,
+    setActiveNav,
+    isScrolled,
+    setShowMenu,
+}) => {
     return (
         <div
             className={`fixed  top-3 duration-300  rounded-full -z-10 ${
@@ -22,7 +28,10 @@ const Menu = ({ showMenu, activeNav, setActiveNav, isScrolled }) => {
                         to='about'
                         onClick={() => setActiveNav('#about')}
                     >
-                        <AiOutlineUser className='text-lg' />
+                        <AiOutlineUser
+                            className='text-lg'
+                            onClick={() => setShowMenu(false)}
+                        />
                     </ScrollLink>
                 </li>
                 <li
@@ -36,7 +45,10 @@ const Menu = ({ showMenu, activeNav, setActiveNav, isScrolled }) => {
                         to='projects'
                         onClick={() => setActiveNav('#projects')}
                     >
-                        <AiOutlineProject className='text-lg' />
+                        <AiOutlineProject
+                            className='text-lg'
+                            onClick={() => setShowMenu(false)}
+                        />
                     </ScrollLink>
                 </li>
                 <li
@@ -50,7 +62,10 @@ const Menu = ({ showMenu, activeNav, setActiveNav, isScrolled }) => {
                         to='contact'
                         onClick={() => setActiveNav('#contact')}
                     >
-                        <AiOutlineMail className='text-lg ' />
+                        <AiOutlineMail
+                            className='text-lg '
+                            onClick={() => setShowMenu(false)}
+                        />
                     </ScrollLink>
                 </li>
             </ul>

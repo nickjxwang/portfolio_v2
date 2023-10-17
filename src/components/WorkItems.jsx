@@ -9,7 +9,7 @@ const WorkItems = ({ item, index }) => {
         >
             <div className={`${index % 2 != 0 ? 'order-1' : ''}`}>
                 <img
-                    src={item.image}
+                    src={item.img}
                     alt=''
                     className='w-full h-full object-cover'
                 />

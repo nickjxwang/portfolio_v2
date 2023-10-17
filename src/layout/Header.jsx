@@ -13,16 +13,16 @@ const Header = ({
     setActiveNav,
     setIsScrolled,
 }) => {
-    useEffect(() => {
-        const windowHeight = window.innerHeight
-        const scrollY = window.scrollY
+    // useEffect(() => {
+    //     const windowHeight = window.innerHeight
+    //     const scrollY = window.scrollY
 
-        if (scrollY >= windowHeight - 50) {
-            setIsScrolled(true)
-        } else {
-            setIsScrolled(false)
-        }
-    }, [])
+    //     if (scrollY >= windowHeight - 50) {
+    //         setIsScrolled(true)
+    //     } else {
+    //         setIsScrolled(false)
+    //     }
+    // }, [])
 
     useEffect(() => {
         const handleScroll = () => {
@@ -35,6 +35,9 @@ const Header = ({
                 setIsScrolled(false)
             }
         }
+
+        const initialScrollY = window.scrollY
+        handleScroll()
 
         window.addEventListener('scroll', handleScroll)
 
@@ -119,7 +122,6 @@ const Header = ({
                     className={`flex justify-center font-medium cursor-pointer rounded-lg transition duration-300 z-[999] sm:hidden ${
                         showMenu ? 'text-title_dark' : 'text-title'
                     }  ml-6`}
-                    onClick={() => setShowMenu(!showMenu)}
                 >
                     <div
                         className={`bg-opacity-0 p-2 rounded-full text-container transition z-10 duration-300 ${
@@ -132,10 +134,12 @@ const Header = ({
                             <HiMenuAlt2
                                 size={25}
                                 className={`text-container font-medium transition duration-300 text-right`}
+                                onClick={() => setShowMenu(!showMenu)}
                             />
                         </div>
                         <Menu
                             showMenu={showMenu}
+                            setShowMenu={setShowMenu}
                             activeNav={activeNav}
                             setActiveNav={setActiveNav}
                             isScrolled={isScrolled}

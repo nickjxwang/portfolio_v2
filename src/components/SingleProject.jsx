@@ -4,8 +4,10 @@ import { BsArrowLeftShort } from 'react-icons/bs'
 import ScrollToTop from './ScrollToTop'
 import img from '../assets/Profile.webp'
 import SingleProjectHeader from './SingleProjectHeader'
-import Footer from '../layout/Footer'
 import SingleProjectVideo from './SingleProjectVideo'
+import SingleProjectSlider from './SingleProjectSlider'
+import Footer from '../layout/Footer'
+import SingleProjectImage from './SingleProjectImage'
 
 const SingleProject = () => {
     const navigate = useNavigate()
@@ -57,7 +59,9 @@ const SingleProject = () => {
                 </div>
             </div>
 
-            <SingleProjectVideo project={project} />
+            {project.video && <SingleProjectVideo project={project} />}
+            {project.slider && <SingleProjectSlider project={project} />}
+            {project.image && <SingleProjectImage project={project} />}
 
             <Footer />
         </div>

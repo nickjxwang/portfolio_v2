@@ -18,11 +18,13 @@ const Home = ({
                 isScrolled={isScrolled}
                 setIsScrolled={setIsScrolled}
             />
-            <Hero />
-            <About />
-            <Works />
-            <Contact />
-            <Footer />
+            <div onClick={() => setShowMenu(false)}>
+                <Hero />
+                <About />
+                <Works />
+                <Contact />
+                <Footer />
+            </div>
         </>
     )
 }

@@ -7,7 +7,7 @@ import Work5 from '../assets/work5.jpg'
 export const projectsData = [
     {
         id: '1',
-        image: Work1,
+        img: Work1,
         title: 'Web design',
         category: 'web',
         data: '2023',
@@ -15,31 +15,35 @@ export const projectsData = [
     },
     {
         id: '2',
-        image: Work2,
+        img: Work2,
         title: 'Movie',
         category: 'design',
         data: '2023',
+        slider: [Work1, Work2, Work3, Work4, Work5],
     },
     {
         id: '3',
-        image: Work3,
+        img: Work3,
         title: '3D model',
         category: '3d',
         data: '2023',
+        image: Work3,
     },
     {
         id: '4',
-        image: Work4,
+        img: Work4,
         title: 'Interaction design',
         category: 'unity',
         data: '2023',
+        image: Work4,
     },
     {
         id: '5',
-        image: Work5,
+        img: Work5,
         title: 'Music',
         category: 'web',
         data: '2023',
+        image: Work5,
     },
 ]
 
