@@ -16,10 +16,10 @@ export default {
     theme: {
         colors: {
             title: '#6D6F6E',
-            title_dark: '#38383F',
+            title_dark: '#343434',
             text: '#979696',
-            body: '#EAEAEA',
-            container: '#F6F6F6',
+            body: '#eaeaea',
+            container: '#f6f6f6',
         },
         fontFamily: {
             Poppins: 'Poppins',

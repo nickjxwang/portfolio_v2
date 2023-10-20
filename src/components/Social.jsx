@@ -2,13 +2,13 @@ import { RiGithubLine, RiLinkedinLine } from 'react-icons/ri'
 
 const Social = () => {
     return (
-        <div className='flex items-center gap-4 lg:gap-8'>
+        <div className='flex items-center gap-4 lg:gap-6'>
             <a href='https://www.linkedin.com/in/nwang15/' target='_blank'>
-                <RiLinkedinLine className='social-icon rounded-md' />
+                <RiLinkedinLine className='rounded-md social-icon' />
             </a>
 
             <a href='https://github.com/nickjxwang' target='_blank'>
-                <RiGithubLine className='social-icon rounded-full' />
+                <RiGithubLine className='rounded-full social-icon' />
             </a>
         </div>
     )

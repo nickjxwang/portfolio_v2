@@ -34,9 +34,9 @@ const Contact = () => {
                             <form
                                 ref={form}
                                 onSubmit={sendEmail}
-                                className='w-80 pt-16 sm:w-96'
+                                className='pt-16 w-80 sm:w-96'
                             >
-                                <div className='relative mb-8 h-16'>
+                                <div className='relative h-16 mb-8'>
                                     <label className='absolute text-title bg-[#f0f0f0] top-[-.85rem] left-5 text-sm p-1 px-2 z-10'>
                                         Name
                                     </label>
@@ -49,7 +49,7 @@ const Contact = () => {
                                     />
                                 </div>
 
-                                <div className='relative mt-8 h-16'>
+                                <div className='relative h-16 mt-8'>
                                     <label className='absolute text-title bg-[#f0f0f0] top-[-.85rem] left-5 text-sm p-1 px-2 z-10'>
                                         Email
                                     </label>
@@ -62,12 +62,12 @@ const Contact = () => {
                                     />
                                 </div>
 
-                                <div className='relative h-44 mt-8'>
+                                <div className='relative mt-8 h-44'>
                                     <label className='absolute text-title bg-[#f0f0f0] top-[-.85rem] left-5 text-sm p-1 px-2 z-10'>
                                         Message
                                     </label>
                                     <textarea
-                                        className='contact-form-input resize-none'
+                                        className='resize-none contact-form-input'
                                         name='message'
                                         cols='30'
                                         rows='10'
@@ -77,7 +77,7 @@ const Contact = () => {
                                 </div>
                             </form>
                             <button
-                                className='bg-[#f0f0f0] border-[1px] inline-flex items-center py-4 px-5 font-medium gap-2 mt-8 group transition duration-300 hover:bg-title_dark'
+                                className='bg-[#f0f0f0] border-[1px] rounded-sm inline-flex items-center py-4 px-5 font-medium gap-2 mt-8 group transition duration-300 hover:bg-title_dark'
                                 type='submit'
                             >
                                 <span className='text-title_dark group-hover:text-[#f0f0f0]'>

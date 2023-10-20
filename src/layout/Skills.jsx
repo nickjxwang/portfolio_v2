@@ -4,7 +4,7 @@ import Development from '../components/Development'
 const Skills = () => {
     return (
         <section className='' id='skills'>
-            <div className='section--title flex flex-col gap-2 items-center '>
+            <div className='flex flex-col items-center gap-2 section--title '>
                 <h2 className=''>Skills</h2>
                 <div className='w-[80px] h-[1px] gradient-line rounded-lg'></div>
             </div>

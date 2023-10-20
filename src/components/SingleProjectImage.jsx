@@ -5,7 +5,7 @@ const SingleProjectImage = ({ project }) => {
                 <img
                     src={project.image}
                     alt=''
-                    className='w-full mx-auto bg-cover p-4 md:p-8'
+                    className='w-full p-4 mx-auto bg-cover md:p-8'
                 />
             </div>
         </div>

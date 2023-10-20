@@ -12,6 +12,8 @@ export const projectsData = [
         category: 'web',
         data: '2023',
         video: 'https://www.youtube.com/embed/lwDSuDfKlIo',
+        url: 'https://www.youtube.com/embed/lwDSuDfKlIo',
+        code: '',
     },
     {
         id: '2',

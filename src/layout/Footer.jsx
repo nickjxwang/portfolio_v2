@@ -4,14 +4,14 @@ import { RiGithubLine, RiLinkedinLine } from 'react-icons/ri'
 const Footer = () => {
     return (
         <footer className=' bg-container footer'>
-            <div className='container-c flex flex-col justify-center items-center py-6'>
-                {/* <h1 className='text-title text-3xl text-center mb-4'>Nick</h1> */}
+            <div className='flex flex-col items-center justify-center py-6 container-c'>
+                {/* <h1 className='mb-4 text-3xl text-center text-title'>Nick</h1> */}
 
                 {/* <ul className='flex justify-center gap-6 mb-4'>
                     <li>
                         <a
                             href='#about'
-                            className='text-title transition duration-300 hover:text-title_dark'
+                            className='transition duration-300 text-title hover:text-title_dark'
                         >
                             About
                         </a>
@@ -19,7 +19,7 @@ const Footer = () => {
                     <li>
                         <a
                             href='#projects'
-                            className='text-title transition duration-300 hover:text-title_dark'
+                            className='transition duration-300 text-title hover:text-title_dark'
                         >
                             Projects
                         </a>
@@ -31,11 +31,11 @@ const Footer = () => {
                         href='https://www.linkedin.com/in/nwang15/'
                         target='_blank'
                     >
-                        <RiLinkedinLine className='social-icon-footer rounded-md' />
+                        <RiLinkedinLine className='rounded-md social-icon-footer' />
                     </a>
 
                     <a href='https://github.com/nickjxwang' target='_blank'>
-                        <RiGithubLine className='social-icon-footer rounded-full' />
+                        <RiGithubLine className='rounded-full social-icon-footer' />
                     </a>
                 </div>
 

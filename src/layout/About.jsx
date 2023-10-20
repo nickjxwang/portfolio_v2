@@ -15,7 +15,7 @@ const About = () => {
                             </h2>
 
                             <div className='w-[95%] mx-auto mt-[7.5rem] xl:px-10 xl:w-full'>
-                                <p className='text-text text-sm font-normal mb-6 md:text-xl'>
+                                <p className='mb-6 text-sm font-normal text-text md:text-xl'>
                                     I'm passionate about web development and
                                     have experience in interactive design. I
                                     excel at problem-solving and transforming
@@ -31,44 +31,44 @@ const About = () => {
                                     Development
                                 </h3>
                                 <ul className='grid grid-cols-4 gap-2 text-[10px] font-normal text-title sm:text-base md:grid-cols-3 md:gap-6 sm:mx-2 md:mx-4 lg:mx-6'>
-                                    <li className='border sm:py-2 sm:px-2 py-1 rounded-[.2rem] text-center'>
+                                    <li className='py-1 text-center border rounded-sm sm:py-2 sm:px-2'>
                                         <p>HTML/CSS</p>
                                     </li>
-                                    <li className='border sm:py-2 sm:px-2 py-1 rounded-[.2rem] text-center'>
+                                    <li className='py-1 text-center border rounded-sm sm:py-2 sm:px-2'>
                                         <p>Javascript</p>
                                     </li>
-                                    <li className='border sm:py-2 sm:px-2 py-1 rounded-[.2rem] text-center'>
+                                    <li className='py-1 text-center border rounded-sm sm:py-2 sm:px-2'>
                                         <p>React</p>
                                     </li>
-                                    <li className='border sm:py-2 sm:px-2 py-1 rounded-[.2rem] text-center'>
+                                    <li className='py-1 text-center border rounded-sm sm:py-2 sm:px-2'>
                                         <p>TailwindCSS</p>
                                     </li>
-                                    <li className='border sm:py-2 sm:px-2 py-1 rounded-[.2rem] text-center'>
+                                    <li className='py-1 text-center border rounded-sm sm:py-2 sm:px-2'>
                                         <p>Git</p>
                                     </li>
-                                    <li className='border sm:py-2 sm:px-2 py-1 rounded-[.2rem] text-center'>
+                                    <li className='py-1 text-center border rounded-sm sm:py-2 sm:px-2'>
                                         <p>Unity</p>
                                     </li>
-                                    <li className='border sm:py-2 sm:px-2 py-1 rounded-[.2rem] text-center'>
+                                    <li className='py-1 text-center border rounded-sm sm:py-2 sm:px-2'>
                                         <p>C#</p>
                                     </li>
                                 </ul>
                             </div>
                             <div className=''>
-                                <h3 className='text-xs text-title mb-3 md:text-xl md:mb-10'>
+                                <h3 className='mb-3 text-xs text-title md:text-xl md:mb-10'>
                                     Design
                                 </h3>
                                 <ul className='grid grid-cols-4 gap-2 text-[10px] font-normal text-title sm:text-base md:grid-cols-3 md:gap-6 sm:mx-2 md:mx-4 lg:mx-6'>
-                                    <li className='border sm:py-2 sm:px-2 py-[2px] rounded-[.2rem] text-center'>
+                                    <li className='border sm:py-2 sm:px-2 py-[2px] rounded-sm text-center'>
                                         <p>Figma</p>
                                     </li>
-                                    <li className='border sm:py-2 sm:px-2 py-[2px] rounded-[.2rem] text-center'>
+                                    <li className='border sm:py-2 sm:px-2 py-[2px] rounded-sm text-center'>
                                         <p>Photoshop</p>
                                     </li>
-                                    <li className='border sm:py-2 sm:px-2 py-[2px] rounded-[.2rem] text-center'>
+                                    <li className='border sm:py-2 sm:px-2 py-[2px] rounded-sm text-center'>
                                         <p>Illustrator</p>
                                     </li>
-                                    <li className='border sm:py-2 sm:px-2 py-[2px] rounded-[.2rem] text-center'>
+                                    <li className='border sm:py-2 sm:px-2 py-[2px] rounded-sm text-center'>
                                         <p>After Effect</p>
                                     </li>
                                 </ul>
@@ -76,7 +76,7 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-                <div className='row-span-2 md:col-span-2 h-full'>
+                <div className='h-full row-span-2 md:col-span-2'>
                     <div className='w-[90%] h-full mx-auto bg-about bg-cover bg-no-repeat  xl:w-[100%] xl:bg-[center_left_3rem] lg:bg-[center_left_2rem] md:h-full lg:w-full md:bg-[center_left_-2rem'></div>
                 </div>
             </div>

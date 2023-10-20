@@ -65,12 +65,12 @@ const Header = ({
                 >
                     NICK
                     <span
-                        className={`absolute top-[9.5px] right-[14px] rounded-full transition duration-300 bg-[#D6C7BC] w-[4.5px] h-[4.5px]`}
+                        className={`absolute top-[9.5px] right-[14px] rounded-full transition duration-300 bg-[#9DB2BF] w-[4.5px] h-[4.5px]`}
                     ></span>
                 </ScrollLink>
 
                 <div className='hidden sm:flex'>
-                    <ul className='grid-c text-container text-sm flex gap-8'>
+                    <ul className='flex gap-8 text-sm grid-c text-container'>
                         <li
                             className={`pb-1 cursor-pointer font-medium transition duration-300 hover:animate-expand ${
                                 activeNav === '#about' ? '' : ''
@@ -116,7 +116,7 @@ const Header = ({
                             </ScrollLink>
                         </li>
                     </ul>
-                    <i className='uil uil-times hidden'></i>
+                    <i className='hidden uil uil-times'></i>
                 </div>
                 <div
                     className={`flex justify-center font-medium cursor-pointer rounded-lg transition duration-300 z-[999] sm:hidden ${

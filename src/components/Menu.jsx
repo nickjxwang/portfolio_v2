@@ -12,7 +12,7 @@ const Menu = ({
 }) => {
     return (
         <div
-            className={`fixed  top-3 duration-300  rounded-full -z-10 ${
+            className={`fixed top-3 duration-300 rounded-full -z-10 ${
                 showMenu ? 'right-12 opacity-100' : '-right-[100%] opacity-0'
             } ${isScrolled ? '' : ''} `}
         >
