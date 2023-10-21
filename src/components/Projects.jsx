@@ -2,15 +2,17 @@ import WorkItems from './WorkItems'
 
 const Projects = ({ projects }) => {
     if (projects.length < 1) {
-        return <h4>Sorry,no products matched your search...</h4>
+        return (
+            <h4 className='p-4 text-xl text-center text-title_dark'>
+                Coming Soon...
+            </h4>
+        )
     }
     return (
-        <div className='h-full xl:w-[90%] xl:mx-auto'>
-            <div className='h-full sm:px-10'>
-                {projects.map((item, index) => (
-                    <WorkItems item={item} key={item.id} index={index} />
-                ))}
-            </div>
+        <div className='h-full xl:w-[90%] xl:mx-auto sm:px-10'>
+            {projects.map((item, index) => (
+                <WorkItems item={item} key={item.id} index={index} />
+            ))}
         </div>
     )
 }

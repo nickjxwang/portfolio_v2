@@ -22,8 +22,11 @@ const SingleProject = () => {
             <ScrollToTop />
             <SingleProjectHeader />
 
-            <div className='relative w-full h-full bg-center bg-no-repeat bg-cover bg-profile'>
-                <div className='absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center bg-[#000] bg-opacity-40'></div>
+            <div
+                className='relative w-full h-full bg-center bg-no-repeat bg-cover'
+                style={{ backgroundImage: `url(${project.img})` }}
+            >
+                <div className='absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center bg-[#000] bg-opacity-70'></div>
             </div>
 
             <div className='h-full absolute top-0 left-[10%] right-[10%] z-20'>
@@ -39,19 +42,27 @@ const SingleProject = () => {
                         <h2 className='text-4xl text-container md:text-5xl lg:text-6xl'>
                             {project.title}
                         </h2>
-                        <p className='text-container text-opacity-80 text-xs xl:w-[85%] lg:text-lg md:text-base'>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Optio fuga vero fugit explicabo similique
-                            repellat impedit mollitia ipsa! Quod quae ipsa
-                            numquam, aut pariatur qui quibusdam magnam omnis
-                            repudiandae ducimus.
+                        <p className='text-container text-opacity-80 text-xs xl:w-[100%] lg:text-lg md:text-base'>
+                            {project.desc}
                         </p>
+
+                        <ul className='flex gap-4'>
+                            {project.tool.map((item, index) => (
+                                <li
+                                    className='px-3 py-1 text-sm border rounded-full bg-title_dark text-container border-container'
+                                    key={index}
+                                >
+                                    {item}
+                                </li>
+                            ))}
+                        </ul>
+
                         <div className='w-full h-[1px] gradient-line rounded-lg mt-5'></div>
 
                         <div className='flex items-center gap-10 mt-4'>
-                            {project.url ? (
+                            {project.view ? (
                                 <div className='px-2 py-2 text-xs font-medium transition duration-300 border rounded-sm border-body text-body hover:text-title_dark hover:bg-body md:text-base md:px-3 md:py-3'>
-                                    <a href={project.url} target='_blank'>
+                                    <a href={project.view} target='_blank'>
                                         View the project
                                     </a>
                                 </div>
@@ -61,7 +72,9 @@ const SingleProject = () => {
 
                             {project.code ? (
                                 <div className='px-2 py-2 text-xs font-medium transition duration-300 border rounded-sm border-body text-body hover:text-title_dark hover:bg-body md:text-base md:px-3 md:py-3'>
-                                    <a href={project.code}>View the code</a>
+                                    <a href={project.code} target='_blank'>
+                                        View the code
+                                    </a>
                                 </div>
                             ) : (
                                 ''

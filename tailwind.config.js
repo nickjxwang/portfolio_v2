@@ -27,6 +27,11 @@ export default {
         backgroundImage: {
             profile: "url('/src/assets/Profile.jpg')",
             about: "url('/src/assets/about.jpg')",
+            work1: "url('/src/assets/work1.webp')",
+            work2: "url('/src/assets/work2.jpg')",
+            work3: "url('/src/assets/work3.webp')",
+            work4: "url('/src/assets/work4.webp')",
+            work5: "url('/src/assets/work5.webp')",
         },
         extend: {
             keyframes: {
