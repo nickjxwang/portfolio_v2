@@ -11,7 +11,7 @@ const WorkItem = ({ item }) => {
             </dir>
             <div className='flex flex-col justify-between h-full p-4 pb-3 sm:p-6 sm:pb-3 md:p-8 md:pb-4 lg:p-10 lg:pb-6 xl:px-12'>
                 <div className=''>
-                    <h3 className='text-sm pt-1 text-text font-normal sm:text-lg md:text-xl lg:text-[1.8rem]'>
+                    <h3 className='text-[.75rem] pt-1 text-text font-normal sm:text-lg md:text-xl lg:text-[1.8rem]'>
                         {item.title}
                     </h3>
                 </div>

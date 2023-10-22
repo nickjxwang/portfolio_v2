@@ -18,7 +18,7 @@ export const projectsData = [
         data: '2023',
         view: 'https://www.youtube.com/embed/lwDSuDfKlIo',
         video: 'https://www.youtube.com/embed/lwDSuDfKlIo',
-        tool: ['React', 'Tailwind'],
+        tool: ['React', 'TailwindCSS'],
         code: '',
     },
     {

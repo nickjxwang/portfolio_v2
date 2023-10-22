@@ -7,7 +7,7 @@ const WorkItems = ({ item, index }) => {
             <div
                 className={`${
                     index % 2 != 0 ? 'order-1' : ''
-                } overflow-hidden h-[90px] sm:h-[110px] md:h-[140px] lg:h-[180px] xl:h-[250px]`}
+                } overflow-hidden h-[90px] sm:h-[110px] md:h-[150px] lg:h-[180px] xl:h-[250px]`}
             >
                 <a href={`/${item.category}/${item.id}`}>
                     <img

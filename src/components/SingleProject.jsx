@@ -2,12 +2,11 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { projectsData } from '../context/projects_context'
 import { BsArrowLeftShort } from 'react-icons/bs'
 import ScrollToTop from './ScrollToTop'
-import img from '../assets/Profile.webp'
 import SingleProjectHeader from './SingleProjectHeader'
 import SingleProjectVideo from './SingleProjectVideo'
 import SingleProjectSlider from './SingleProjectSlider'
-import Footer from '../layout/Footer'
 import SingleProjectImage from './SingleProjectImage'
+import Footer from '../layout/Footer'
 
 const SingleProject = () => {
     const navigate = useNavigate()

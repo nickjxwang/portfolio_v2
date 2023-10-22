@@ -1,6 +1,5 @@
 import Social from '../components/Social'
 import Data from '../components/Data'
-import AboutImg from '../assets/about.jpg'
 
 const Hero = () => {
     return (
