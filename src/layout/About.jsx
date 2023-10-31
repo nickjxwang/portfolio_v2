@@ -1,4 +1,6 @@
 import AboutImg from '../assets/about.jpg'
+import Design from '../components/Design'
+import Development from '../components/Development'
 
 const About = () => {
     return (
@@ -26,53 +28,8 @@ const About = () => {
                         </div>
 
                         <div className='grid grid-rows-2 gap-4 px-2 sm:px-4 xl:px-5 md:gap-10'>
-                            <div className='flex flex-col gap-3 md:gap-10'>
-                                <h3 className='text-xs text-title md:text-xl'>
-                                    Development
-                                </h3>
-                                <ul className='grid grid-cols-4 gap-2 text-[10px] font-normal text-title sm:text-base md:grid-cols-3 md:gap-6 sm:mx-2 md:mx-4 lg:mx-6'>
-                                    <li className='py-1 text-center border rounded-sm sm:py-2 sm:px-2'>
-                                        <p>HTML/CSS</p>
-                                    </li>
-                                    <li className='py-1 text-center border rounded-sm sm:py-2 sm:px-2'>
-                                        <p>Javascript</p>
-                                    </li>
-                                    <li className='py-1 text-center border rounded-sm sm:py-2 sm:px-2'>
-                                        <p>React</p>
-                                    </li>
-                                    <li className='py-1 text-center border rounded-sm sm:py-2 sm:px-2'>
-                                        <p>TailwindCSS</p>
-                                    </li>
-                                    <li className='py-1 text-center border rounded-sm sm:py-2 sm:px-2'>
-                                        <p>Git</p>
-                                    </li>
-                                    <li className='py-1 text-center border rounded-sm sm:py-2 sm:px-2'>
-                                        <p>Unity</p>
-                                    </li>
-                                    <li className='py-1 text-center border rounded-sm sm:py-2 sm:px-2'>
-                                        <p>C#</p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className=''>
-                                <h3 className='mb-3 text-xs text-title md:text-xl md:mb-10'>
-                                    Design
-                                </h3>
-                                <ul className='grid grid-cols-4 gap-2 text-[10px] font-normal text-title sm:text-base md:grid-cols-3 md:gap-6 sm:mx-2 md:mx-4 lg:mx-6'>
-                                    <li className='border sm:py-2 sm:px-2 py-[2px] rounded-sm text-center'>
-                                        <p>Figma</p>
-                                    </li>
-                                    <li className='border sm:py-2 sm:px-2 py-[2px] rounded-sm text-center'>
-                                        <p>Photoshop</p>
-                                    </li>
-                                    <li className='border sm:py-2 sm:px-2 py-[2px] rounded-sm text-center'>
-                                        <p>Illustrator</p>
-                                    </li>
-                                    <li className='border sm:py-2 sm:px-2 py-[2px] rounded-sm text-center'>
-                                        <p>After Effect</p>
-                                    </li>
-                                </ul>
-                            </div>
+                            <Development />
+                            <Design />
                         </div>
                     </div>
                 </div>

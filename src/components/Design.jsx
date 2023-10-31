@@ -1,33 +1,23 @@
 const Design = () => {
     return (
-        <div className='skill-content bg-body mx-12 drop-shadow-[0_-1px_4px_rgba(0,0,0,0.1)] -z-10 lg:mx-0 md:mx-10 sm:mx-24'>
-            <h3 className='mb-8 text-base font-semibold text-center text-title_dark'>
+        <div className=''>
+            <h3 className='mb-3 text-xs text-title md:text-xl md:mb-10'>
                 Design
             </h3>
-
-            <div className='grid items-start justify-between grid-cols-2 gap-6'>
-                <div className='skills_data'>
-                    <h3 className='font-normal text-center'>Figma</h3>
-                </div>
-                <div className='skills_data'>
-                    <h3 className='font-normal text-center'>Photoshop</h3>
-                </div>
-                <div className='skills_data'>
-                    <h3 className='font-normal text-center'>Illustrator</h3>
-                </div>
-                <div className='skills_data'>
-                    <h3 className='font-normal text-center'>After Effects</h3>
-                </div>
-                <div className='skills_data'>
-                    <h3 className='font-normal text-center'>Wireframe</h3>
-                </div>
-                <div className='skills_data'>
-                    <h3 className='font-normal text-center'>Mockup</h3>
-                </div>
-                <div className='skills_data'>
-                    <h3 className='font-normal text-center'>Prototype</h3>
-                </div>
-            </div>
+            <ul className='grid grid-cols-4 gap-2 text-[10px] font-normal text-title sm:text-base md:grid-cols-3 md:gap-6 sm:mx-2 md:mx-4 lg:mx-6'>
+                <li className='border sm:py-2 sm:px-2 py-[2px] rounded-sm text-center'>
+                    <p>Figma</p>
+                </li>
+                <li className='border sm:py-2 sm:px-2 py-[2px] rounded-sm text-center'>
+                    <p>Photoshop</p>
+                </li>
+                <li className='border sm:py-2 sm:px-2 py-[2px] rounded-sm text-center'>
+                    <p>Illustrator</p>
+                </li>
+                <li className='border sm:py-2 sm:px-2 py-[2px] rounded-sm text-center'>
+                    <p>After Effect</p>
+                </li>
+            </ul>
         </div>
     )
 }

@@ -1,8 +1,8 @@
-import Work1 from '../assets/work1.webp'
+import Work1 from '../assets/work1.jpg'
 import Work2 from '../assets/work2.jpg'
 import Work3 from '../assets/work3.webp'
 import Work4 from '../assets/work4.webp'
-import Work5 from '../assets/work5.webp'
+import Work5 from '../assets/work5.jpg'
 import slide1_3d from '../assets/slide1-3d.jpg'
 import slide2_3d from '../assets/slide2-3d.jpg'
 import slide3_3d from '../assets/slide3-3d.jpg'
@@ -13,13 +13,14 @@ export const projectsData = [
     {
         id: '1',
         img: Work1,
-        title: 'Web design',
+        title: 'Movie DB',
         category: 'web',
         data: '2023',
-        view: 'https://www.youtube.com/embed/lwDSuDfKlIo',
-        video: 'https://www.youtube.com/embed/lwDSuDfKlIo',
-        tool: ['React', 'TailwindCSS'],
-        code: '',
+        image: Work1,
+        view: 'https://next-imdb-azure.vercel.app',
+        code: 'https://github.com/nickjxwang/next-imdb',
+        tool: ['NextJS', 'Tailwind CSS'],
+        desc: 'This is a movie database website primarily built using Next.js and Tailwind CSS technologies. The website offers a wealth of information about various movies. Users can easily search for movies of their interest through a simple search feature. Furthermore, the website features responsive design, ensuring a great display and user experience on different devices.',
     },
     {
         id: '2',
@@ -29,7 +30,7 @@ export const projectsData = [
         data: '2022',
         slider: [slide1_3d, slide2_3d, slide3_3d, slide4_3d, slide5_3d],
         tool: ['Maya', 'Substance Painter'],
-        desc: '',
+        desc: 'This is a 3D artwork I created using Maya modeling and Substance Painter texturing techniques. It showcases a traditional Japanese temple nestled in a forest with blossoming cherry trees. Through this piece, I aim to immerse the audience in a captivating scene filled with historical and cultural charm, capturing the serene beauty of a traditional Japanese temple.',
     },
     {
         id: '3',

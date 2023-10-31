@@ -38,14 +38,14 @@ const SingleProject = () => {
                         Back
                     </button>
                     <div className='w-[100%] h-full flex flex-col justify-end pb-52 gap-4'>
-                        <h2 className='text-4xl text-container md:text-5xl lg:text-6xl'>
+                        <h2 className='text-4xl mb-2 text-container md:text-5xl lg:text-6xl'>
                             {project.title}
                         </h2>
-                        <p className='text-container text-opacity-80 text-xs xl:w-[100%] lg:text-lg md:text-base'>
+                        <p className='text-container mb-2 text-xs xl:w-[100%] lg:text-lg md:text-base'>
                             {project.desc}
                         </p>
 
-                        <ul className='flex gap-4'>
+                        <ul className='flex gap-3'>
                             {project.tool.map((item, index) => (
                                 <li
                                     className='px-3 py-1 text-sm border rounded-full bg-title_dark text-container border-container'
@@ -56,11 +56,11 @@ const SingleProject = () => {
                             ))}
                         </ul>
 
-                        <div className='w-full h-[1px] gradient-line rounded-lg mt-5'></div>
+                        <div className='w-full h-[1px] gradient-line rounded-lg mt-1'></div>
 
-                        <div className='flex items-center gap-10 mt-4'>
+                        <div className='flex items-center gap-10 mt-2'>
                             {project.view ? (
-                                <div className='px-2 py-2 text-xs font-medium transition duration-300 border rounded-sm border-body text-body hover:text-title_dark hover:bg-body md:text-base md:px-3 md:py-3'>
+                                <div className='px-2 py-2 text-xs font-medium transition duration-300 border rounded-sm border-body text-body hover:text-title_dark hover:bg-body lg:text-base md:px-3 md:py-3'>
                                     <a href={project.view} target='_blank'>
                                         View the project
                                     </a>
@@ -70,7 +70,7 @@ const SingleProject = () => {
                             )}
 
                             {project.code ? (
-                                <div className='px-2 py-2 text-xs font-medium transition duration-300 border rounded-sm border-body text-body hover:text-title_dark hover:bg-body md:text-base md:px-3 md:py-3'>
+                                <div className='px-2 py-2 text-xs font-medium transition duration-300 border rounded-sm border-body text-body hover:text-title_dark hover:bg-body lg:text-base md:px-3 md:py-3'>
                                     <a href={project.code} target='_blank'>
                                         View the code
                                     </a>

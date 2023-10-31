@@ -9,7 +9,7 @@ const SingleProjectHeader = () => {
             const windowHeight = window.innerHeight
             const scrollY = window.scrollY
 
-            if (scrollY >= 50) {
+            if (scrollY >= 30) {
                 setIsScrolledProject(true)
             } else {
                 setIsScrolledProject(false)
