@@ -10,9 +10,9 @@ const Data = () => {
             </h1>
             <p className='mb-6 text-base text-text lg:text-3xl lg:mb-8 md:text-xl'>
                 I'm a{' '}
-                <span className='text-[#D6C7BC] font-medium'>Developer</span>{' '}
+                <span className='text-[#C9D6DF] font-medium'>Developer</span>{' '}
                 with a background in{' '}
-                <span className='text-[#D6C7BC] font-medium'>Design</span>.
+                <span className='text-[#C9D6DF] font-medium'>Design</span>.
             </p>
             <Social />
         </div>

@@ -3,7 +3,7 @@ import { projectsNav } from '../context/projects_context'
 
 const ProjectNav = ({ active, handleClick }) => {
     return (
-        <div className='flex text-sm mt-0 pt-5 text-title justify-center items-center gap-3 mb-6 xl:pt-6 lg:gap-4 lg:mb-12 md:mt-14'>
+        <div className='flex items-center justify-center gap-3 pt-5 mt-0 mb-6 text-sm text-title xl:pt-6 lg:gap-4 lg:mb-12 md:mt-14'>
             {projectsNav.map((item, index) => {
                 return (
                     <span

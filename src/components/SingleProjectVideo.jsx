@@ -1,14 +1,12 @@
 const SingleProjectVideo = ({ project }) => {
     return (
-        <div className='w-full bg-[#f0f0f0] mb-8'>
-            <div className='relative pb-[60%]'>
+        <div className='relative overflow-hidden'>
+            <div className='pt-[56.25%]'>
                 <iframe
-                    width='100%'
-                    height='100%'
-                    title='Youtube Video'
+                    title='Video Player'
                     src={project.video}
-                    className='absolute top-0 left-0 w-full h-full p-4'
                     allowFullScreen
+                    className='absolute top-0 left-0 w-full h-full p-4 xl:p-28'
                 ></iframe>
             </div>
         </div>

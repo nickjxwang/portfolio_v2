@@ -38,7 +38,7 @@ const SingleProject = () => {
                         Back
                     </button>
                     <div className='w-[100%] h-full flex flex-col justify-end pb-52 gap-4'>
-                        <h2 className='text-4xl mb-2 text-container md:text-5xl lg:text-6xl'>
+                        <h2 className='mb-2 text-4xl text-container md:text-5xl lg:text-6xl'>
                             {project.title}
                         </h2>
                         <p className='text-container mb-2 text-xs xl:w-[100%] lg:text-lg md:text-base'>
@@ -48,9 +48,10 @@ const SingleProject = () => {
                         <ul className='flex gap-3'>
                             {project.tool.map((item, index) => (
                                 <li
-                                    className='px-3 py-1 text-sm border rounded-full bg-title_dark text-container border-container'
+                                    className='px-2 py-1 text-xs text-title_dark rounded-full bg-[#C9D6DF] md:text-sm'
                                     key={index}
                                 >
+                                    {/* <div className='bg-[#64D5BF] w-[3px] h-[15px] absolute left-0 '></div> */}
                                     {item}
                                 </li>
                             ))}
@@ -60,7 +61,7 @@ const SingleProject = () => {
 
                         <div className='flex items-center gap-10 mt-2'>
                             {project.view ? (
-                                <div className='px-2 py-2 text-xs font-medium transition duration-300 border rounded-sm border-body text-body hover:text-title_dark hover:bg-body lg:text-base md:px-3 md:py-3'>
+                                <div className='px-2 py-2 text-sm font-medium transition duration-300 border rounded-sm border-body text-body hover:text-title_dark hover:bg-body lg:text-base md:px-3 md:py-3'>
                                     <a href={project.view} target='_blank'>
                                         View the project
                                     </a>
@@ -70,7 +71,7 @@ const SingleProject = () => {
                             )}
 
                             {project.code ? (
-                                <div className='px-2 py-2 text-xs font-medium transition duration-300 border rounded-sm border-body text-body hover:text-title_dark hover:bg-body lg:text-base md:px-3 md:py-3'>
+                                <div className='px-2 py-2 text-sm font-medium transition duration-300 border rounded-sm border-body text-body hover:text-title_dark hover:bg-body lg:text-base md:px-3 md:py-3'>
                                     <a href={project.code} target='_blank'>
                                         View the code
                                     </a>

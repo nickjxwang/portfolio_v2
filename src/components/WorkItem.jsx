@@ -19,12 +19,12 @@ const WorkItem = ({ item }) => {
                     href={`/${item.category}/${item.id}`}
                     className='inline-flex items-center justify-end'
                 >
-                    <div className='flex justify-center items-center gap-[2px] cursor-pointer border-[1px] py-[4px] px-2 group transition duration-30 border-[#d7d7d7] hover:border-title_dark hover:bg-title_dark md:px-3 md:py-1 lg:px-4 lg:py-[.4rem] xl:px-5 md:gap-1'>
-                        <h3 className='text-text font-normal rounded-sm text-[8px] group-hover:text-container sm:text-xs xl:text-base'>
+                    <div className='flex justify-center items-center gap-[2px] cursor-pointer border-[1px] py-[4px] px-2 group transition duration-30 border-[#C9D6DF] hover:border-title_dark hover:bg-title_dark md:px-3 md:py-1 lg:px-4 lg:py-[.4rem] xl:px-5 md:gap-1'>
+                        <h3 className='text-text font-normal rounded-sm text-[8px] group-hover:text-[#C9D6DF] sm:text-xs xl:text-base'>
                             More
                         </h3>
 
-                        <BsArrowRightShort className='text-xs font-light group-hover:animate-move text-text group-hover:text-container sm:text-base' />
+                        <BsArrowRightShort className='text-xs font-light group-hover:animate-move text-text group-hover:text-[#C9D6DF] sm:text-base' />
                     </div>
                 </a>
             </div>

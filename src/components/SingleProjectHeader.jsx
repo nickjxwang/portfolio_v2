@@ -38,7 +38,7 @@ const SingleProjectHeader = () => {
                 >
                     NICK
                     <span
-                        className={`absolute top-[9.5px] right-[14px] rounded-full transition duration-300 bg-[#D6C7BC] w-[4.5px] h-[4.5px]`}
+                        className={`absolute top-[9.6px] right-[14px] rounded-full transition duration-300 bg-[#C9D6DF] w-[4.5px] h-[4.5px]`}
                     ></span>
                 </Link>
             </nav>

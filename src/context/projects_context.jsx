@@ -1,7 +1,7 @@
 import Work1 from '../assets/work1.jpg'
 import Work2 from '../assets/work2.jpg'
-import Work3 from '../assets/work3.webp'
-import Work4 from '../assets/work4.webp'
+import Work3 from '../assets/work3.jpg'
+import Work4 from '../assets/work4.jpg'
 import Work5 from '../assets/work5.jpg'
 import slide1_3d from '../assets/slide1-3d.jpg'
 import slide2_3d from '../assets/slide2-3d.jpg'
@@ -75,9 +75,9 @@ export const projectsNav = [
     {
         name: 'web',
     },
-    {
-        name: 'design',
-    },
+    // {
+    //     name: 'design',
+    // },
     {
         name: 'AR',
     },
