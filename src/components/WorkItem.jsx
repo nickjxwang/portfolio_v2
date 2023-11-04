@@ -1,9 +1,11 @@
 import { BsArrowRightShort } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
+import ScrollToTop from './ScrollToTop'
 
 const WorkItem = ({ item }) => {
     return (
         <div className='relative z-10 h-full'>
+            {/* <ScrollToTop /> */}
             <dir className='absolute bottom-4 right-2 -z-10 sm:right-10 xl:right-7 xl:bottom-6'>
                 <h2 className='text-[#f0f0f0] text-5xl uppercase font-semibold sm:text-6xl md:text-7xl lg:text-8xl'>
                     {item.category}
@@ -15,8 +17,8 @@ const WorkItem = ({ item }) => {
                         {item.title}
                     </h3>
                 </div>
-                <a
-                    href={`/${item.category}/${item.id}`}
+                <Link
+                    to={`/${item.category}/${item.id}`}
                     className='inline-flex items-center justify-end'
                 >
                     <div className='flex justify-center items-center gap-[2px] cursor-pointer border-[1px] py-[4px] px-2 group transition duration-30 border-[#C9D6DF] hover:border-title_dark hover:bg-title_dark md:px-3 md:py-1 lg:px-4 lg:py-[.4rem] xl:px-5 md:gap-1'>
@@ -26,7 +28,7 @@ const WorkItem = ({ item }) => {
 
                         <BsArrowRightShort className='text-xs font-light group-hover:animate-move text-text group-hover:text-[#C9D6DF] sm:text-base' />
                     </div>
-                </a>
+                </Link>
             </div>
         </div>
     )

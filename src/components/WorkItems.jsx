@@ -1,5 +1,6 @@
 import { BsArrowRightShort } from 'react-icons/bs'
 import WorkItem from './WorkItem'
+import { Link } from 'react-router-dom'
 
 const WorkItems = ({ item, index }) => {
     return (
@@ -9,13 +10,13 @@ const WorkItems = ({ item, index }) => {
                     index % 2 != 0 ? 'order-1' : ''
                 } overflow-hidden h-[90px] sm:h-[110px] md:h-[150px] lg:h-[180px] xl:h-[250px]`}
             >
-                <a href={`/${item.category}/${item.id}`}>
+                <Link to={`/${item.category}/${item.id}`}>
                     <img
                         src={item.img}
                         alt=''
                         className='object-cover w-full h-full transition duration-500 cursor-pointer hover:scale-105'
                     />
-                </a>
+                </Link>
             </div>
 
             <div className='w-full bg-body'>

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link as ScrollLink, Element } from 'react-scroll'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import SingleProject from './components/singleProject'
+import SingleProject from './components/SingleProject'
 import ScrollToTop from './components/ScrollToTop'
 import Home from './layout/Home'
 

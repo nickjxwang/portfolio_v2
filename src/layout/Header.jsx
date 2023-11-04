@@ -59,14 +59,15 @@ const Header = ({
                 <ScrollLink
                     to='home'
                     smooth={true}
-                    duration={500}
+                    duration={300}
+                    delay={0}
                     className={`relative cursor-pointer text-container font-medium transition duration-300`}
                     onClick={() => setActiveNav('#home')}
                 >
                     NICK
-                    <span
-                        className={`absolute top-[9.6px] right-[14px] rounded-full transition duration-300 bg-[#C9D6DF] w-[4.5px] h-[4.5px]`}
-                    ></span>
+                    {/* <span
+                        className={`absolute top-[9.4px] right-[14px] rounded-full transition duration-300 bg-[#C9D6DF] w-[4.5px] h-[4.5px]`}
+                    ></span> */}
                 </ScrollLink>
 
                 <div className='hidden sm:flex'>
@@ -79,7 +80,8 @@ const Header = ({
                             <ScrollLink
                                 to='about'
                                 smooth={true}
-                                duration={500}
+                                delay={0}
+                                duration={300}
                                 onClick={() => setActiveNav('#about')}
                             >
                                 About
@@ -93,7 +95,8 @@ const Header = ({
                             <ScrollLink
                                 to='projects'
                                 smooth={true}
-                                duration={500}
+                                delay={0}
+                                duration={300}
                                 offset={-20}
                                 onClick={() => setActiveNav('#projects')}
                             >
@@ -108,7 +111,8 @@ const Header = ({
                             <ScrollLink
                                 to='contact'
                                 smooth={true}
-                                duration={500}
+                                delay={0}
+                                duration={300}
                                 offset={-10}
                                 onClick={() => setActiveNav('#contact')}
                             >

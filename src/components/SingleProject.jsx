@@ -10,7 +10,7 @@ import Footer from '../layout/Footer'
 
 const SingleProject = () => {
     const navigate = useNavigate()
-    const { id } = useParams()
+    const { category, id } = useParams()
     const project = projectsData.find(product => product.id === id)
     const handleGoBack = () => {
         navigate(-1)
@@ -48,7 +48,7 @@ const SingleProject = () => {
                         <ul className='flex gap-3'>
                             {project.tool.map((item, index) => (
                                 <li
-                                    className='px-2 py-1 text-xs text-title_dark rounded-full bg-[#C9D6DF] md:text-sm'
+                                    className='px-3 py-1 text-xs text-container rounded-full border border-[#C9D6DF] md:text-sm'
                                     key={index}
                                 >
                                     {/* <div className='bg-[#64D5BF] w-[3px] h-[15px] absolute left-0 '></div> */}

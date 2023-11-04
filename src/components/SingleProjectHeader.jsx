@@ -37,9 +37,9 @@ const SingleProjectHeader = () => {
                     className={`relative cursor-pointer text-container font-medium transition duration-300`}
                 >
                     NICK
-                    <span
+                    {/* <span
                         className={`absolute top-[9.6px] right-[14px] rounded-full transition duration-300 bg-[#C9D6DF] w-[4.5px] h-[4.5px]`}
-                    ></span>
+                    ></span> */}
                 </Link>
             </nav>
         </div>
